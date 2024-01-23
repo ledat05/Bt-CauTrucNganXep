@@ -90,7 +90,10 @@ namespace Bt_CauTrucNganXep
                     Console.WriteLine($"Biểu diễn hệ {x}:");
                     while (!s.IsEmpty())
                     {
-                        Console.Write(s.Pop());
+                        
+                            int digit = s.Pop();
+                            Console.Write(digit < 10 ? digit.ToString() : ((char)('A' + digit - 10)).ToString());
+                        
                     }
 
                     Console.Write("\n Tiếp tục (y/n)? ");
